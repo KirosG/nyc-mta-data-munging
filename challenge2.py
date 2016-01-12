@@ -14,4 +14,4 @@ def mta_csv_to_timeseries(path_to_csv):
 	        mta_dict[key].append([date,time,entries])
 	return dict(mta_dict)
 
-# mta = mta_csv_to_timeseries('mta_data_jan09.csv')
+mta = mta_csv_to_timeseries('mta_data_jan09.csv')
