@@ -1,26 +1,14 @@
 from challenge2 import mta 
+import dateutil.parser
+
 
 k = mta.keys()[0]
+ts = mta[k]
 
-x = mta[k]
-
-# dates = set([i[0] for i in x ])
-
-date_totals_dict = {}
-
-for i in x:
-	if i[0] not in date_totals_dict:
-		date_totals_dict[i[0]] = int(i[2])
-	else:
-		date_totals_dict[i[0]] += int(i[2])
-
-x = date_totals_dict
-print date_totals_dict.keys()
-
-
-
-
-# x = mta[key]
-# x = ''
-# mta[key] = x 
+d = {}
+for i in ts:
+    if i[0].date() not in d:
+        d[i[0].date()] = i[1]
+    else:
+        d[i[0].date()] = min(i[1],d[i[0].date()])
 
