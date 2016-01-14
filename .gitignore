@@ -1,2 +1,3 @@
 *REPL*
 *.pyc
+.ipynb_checkpoints/
